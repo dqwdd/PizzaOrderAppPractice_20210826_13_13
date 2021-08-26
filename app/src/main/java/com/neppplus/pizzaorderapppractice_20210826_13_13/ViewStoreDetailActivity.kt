@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_view_store_detail.phoneNumTxt
 class ViewStoreDetailActivity : BaseActivity() {
 
     lateinit var mStoreData: StoreData
+//    데이타 나중에 입력하는 멤버변수니까 m레이트이닛바에 var
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,16 +32,19 @@ class ViewStoreDetailActivity : BaseActivity() {
             val myIntent = Intent( Intent.ACTION_DIAL, myUri )
             startActivity(myIntent)
         }
+//        버튼 클릭 시 mStoreData에 저장된 폰번호로 전화
+
         homepageBtn.setOnClickListener {
             val myUri = Uri.parse("${mStoreData.homepageURL}")
             val myIntent = Intent( Intent.ACTION_VIEW, myUri)
             startActivity(myIntent)
         }
     }
+//    버튼 클릭 시 mStoreData에 저장된 URL로 감
 
     override fun setValues() {
         mStoreData = intent.getSerializableExtra("store") as StoreData
-
+//        mStoreData에 데이타 intent로 받아옴(name이 store인거로)
         nameTxt.text = mStoreData.name
         phoneNumTxt.text = mStoreData.phoneNum
 
