@@ -6,7 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.neppplus.pizzaorderapppractice_20210826_13_13.datas.StoreData
+import kotlinx.android.synthetic.main.activity_view_chicken_store_detail.*
 import kotlinx.android.synthetic.main.activity_view_store_detail.*
+import kotlinx.android.synthetic.main.activity_view_store_detail.dialBtn
+import kotlinx.android.synthetic.main.activity_view_store_detail.homepageBtn
+import kotlinx.android.synthetic.main.activity_view_store_detail.logoImg
+import kotlinx.android.synthetic.main.activity_view_store_detail.nameTxt
+import kotlinx.android.synthetic.main.activity_view_store_detail.phoneNumTxt
 
 class ViewStoreDetailActivity : BaseActivity() {
 
@@ -23,6 +29,11 @@ class ViewStoreDetailActivity : BaseActivity() {
         dialBtn.setOnClickListener {
             val myUri = Uri.parse("tel:${mStoreData.phoneNum}")
             val myIntent = Intent( Intent.ACTION_DIAL, myUri )
+            startActivity(myIntent)
+        }
+        homepageBtn.setOnClickListener {
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent( Intent.ACTION_VIEW, myUri)
             startActivity(myIntent)
         }
     }
