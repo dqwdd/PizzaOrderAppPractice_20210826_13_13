@@ -32,7 +32,7 @@ class ViewStoreDetailActivity : BaseActivity() {
             startActivity(myIntent)
         }
         homepageBtn.setOnClickListener {
-            val myUri = Uri.parse("https://naver.com")
+            val myUri = Uri.parse("${mStoreData.homepageURL}")
             val myIntent = Intent( Intent.ACTION_VIEW, myUri)
             startActivity(myIntent)
         }
