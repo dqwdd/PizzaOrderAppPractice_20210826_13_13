@@ -29,6 +29,8 @@ class ChickenStoreListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        mChickenStores.clear()
+
         mChickenStores.add(StoreData_chicken("60계 치킨 부천상동점", "1566-3366", "" + "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MThfMzcg%2FMDAxNjI5MjQ4NjUwMjA5.p7QhuwxYSgN7V9Mc1wHv1EJ9f45f6MjvlN596PYIUzAg.v0Al6DpXJNBkVsi0iDt77bmH_yANf4jA-apL192njI0g.JPEG.guseule%2FIMG_7272.jpg&type=a340", "http://www.60chicken.co.kr/"))
         mChickenStores.add(StoreData_chicken("교촌치킨 상동역점", "1577-1991", "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MTFfMTkx%2FMDAxNjI4NjgyNTAyMjYw.Su8GW6wPc5fXRvrWtrziAmaFaRSAn8dO5hp9eZXfHA8g.g_P5NCC3pleG6RPbLyRE8eqKhK86zqu5mm3quVy4iLIg.JPEG.seyoung1916%2FIMG_4258.jpg&type=a340", "http://www.kyochon.com/main/"))
         mChickenStores.add(StoreData_chicken("푸라닭", "1599-9206", "" + "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MDJfNCAg%2FMDAxNjE5OTI0Nzc3Nzg0.bQe7P_paf9O4ggCBvpQ6fX8avH01xsBCX7OAm0uQV_Qg.inxw-pdDS51lLt6f3xEBLnbdzZVK_MJkG0Wdfm1jGNkg.JPEG.bonita1014%2F21%25A3%25AD05%25A3%25AD02%25A3%25AD12%25A3%25AD05%25A3%25AD57%25A3%25AD444%25A3%25DFdeco.jpg&type=a340", "https://www.puradakchicken.com/main/index.asp"))
