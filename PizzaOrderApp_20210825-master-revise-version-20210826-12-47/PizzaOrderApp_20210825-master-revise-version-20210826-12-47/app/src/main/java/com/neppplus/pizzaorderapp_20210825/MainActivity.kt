@@ -17,18 +17,12 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
-
     }
 
     override fun setValues() {
-
         mainViewPagerAdapter = MainViewPagerAdapter( supportFragmentManager )
         mainViewPager.adapter = mainViewPagerAdapter
 
-
         mainTabLayout.setupWithViewPager( mainViewPager )
-
     }
-
-
 }
